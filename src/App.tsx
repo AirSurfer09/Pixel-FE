@@ -30,6 +30,7 @@ function App() {
           setPsLinkPort(data.stream_address.replace(/:\d+/, ":80"));
           setIpPort(`https:\\${data.ip_address}:80`);
           setIp80(`http:\\${data.ip_address}:80`);
+          console.log(psLinkPort, pslink, ipPort, ip80)
         } else {
           console.error('No stream URL returned from the API');
         }
@@ -101,9 +102,6 @@ function App() {
         {/*     }} */}
         {/*   /> */}
         {/* } */}
-        {pslink}
-        {psLinkPort}
-
       </div>
     </>
   )
