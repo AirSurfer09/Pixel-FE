@@ -108,6 +108,12 @@ function App() {
       <div>
         psLink : {pslink}
       </div>
+      <div>
+        ip80 : {ip80}
+      </div>
+      <div>
+        ipPort : {ipPort}
+      </div>
     </>
   )
 }
