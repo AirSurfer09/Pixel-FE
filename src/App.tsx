@@ -6,6 +6,7 @@ function App() {
   const [ipPort, setIpPort] = useState<string | null>(null)
   const [ip80, setIp80] = useState<string | null>(null)
   const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
+  const [finalRedirect, setFinalRedirect] = useState<string | null>(null)
   const staticIp = "wss://ps-convai-ps-ugc-deployment-vm-instance-1727187589838-1.convai.com:443/?sessionid=feed8ff0-7b26-11ef-93c0-42010a7be011";
 
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
           setPsLinkPort(data.stream_address.replace(/:\d+/, ":8888"));
           setIpPort(`https://${data.ip_address}:80`);
           setIp80(`http://${data.ip_address}:80`);
+          setFinalRedirect(data.finalRedirectURL)
         } else {
           console.error('No stream URL returned from the API');
         }
@@ -49,6 +51,19 @@ function App() {
           width: '100%'
         }}
       >
+        {finalRedirect &&
+          pslink &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: finalRedirect,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
         {/* { */}
         {/*   pslink && */}
         {/*   <PixelStreamingWrapper */}
@@ -62,19 +77,19 @@ function App() {
         {/*     }} */}
         {/*   /> */}
         {/* } */}
-        {
-          psLinkPort &&
-          <PixelStreamingWrapper
-            initialSettings={{
-              AutoPlayVideo: true,
-              AutoConnect: true,
-              ss: staticIp,
-              StartVideoMuted: true,
-              HoveringMouse: true,
-              WaitForStreamer: true,
-            }}
-          />
-        }
+        {/* { */}
+        {/*   psLinkPort && */}
+        {/*   <PixelStreamingWrapper */}
+        {/*     initialSettings={{ */}
+        {/*       AutoPlayVideo: true, */}
+        {/*       AutoConnect: true, */}
+        {/*       ss: staticIp, */}
+        {/*       StartVideoMuted: true, */}
+        {/*       HoveringMouse: true, */}
+        {/*       WaitForStreamer: true, */}
+        {/*     }} */}
+        {/*   /> */}
+        {/* } */}
         {/* { */}
         {/*   ip80 && */}
         {/*   <PixelStreamingWrapper */}
