@@ -112,7 +112,7 @@ function App() {
         ip80 : {ip80}
       </div>
       <div>
-        ipPort : {ipPort}
+        psLinkPort : {psLinkPort}
       </div>
     </>
   )
