@@ -30,7 +30,6 @@ function App() {
           setPsLinkPort(data.stream_address.replace(/:\d+/, ":80"));
           setIpPort(`https://${data.ip_address}:80`);
           setIp80(`http://${data.ip_address}:80`);
-          console.log(psLinkPort, pslink, ipPort, ip80)
         } else {
           console.error('No stream URL returned from the API');
         }
@@ -63,32 +62,32 @@ function App() {
             }}
           />
         }
-        {/* { */}
-        {/*   psLinkPort && */}
-        {/*   <PixelStreamingWrapper */}
-        {/*     initialSettings={{ */}
-        {/*       AutoPlayVideo: true, */}
-        {/*       AutoConnect: true, */}
-        {/*       ss: psLinkPort, */}
-        {/*       StartVideoMuted: true, */}
-        {/*       HoveringMouse: true, */}
-        {/*       WaitForStreamer: true */}
-        {/*     }} */}
-        {/*   /> */}
-        {/* } */}
-        {/* { */}
-        {/*   ip80 && */}
-        {/*   <PixelStreamingWrapper */}
-        {/*     initialSettings={{ */}
-        {/*       AutoPlayVideo: true, */}
-        {/*       AutoConnect: true, */}
-        {/*       ss: ip80, */}
-        {/*       StartVideoMuted: true, */}
-        {/*       HoveringMouse: true, */}
-        {/*       WaitForStreamer: true */}
-        {/*     }} */}
-        {/*   /> */}
-        {/* } */}
+        {
+          psLinkPort &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: psLinkPort,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
+        {
+          ip80 &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: ip80,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
         {
           ipPort &&
           <PixelStreamingWrapper
@@ -105,6 +104,8 @@ function App() {
       </div>
       <div>
         Ip Port : {ipPort}
+      </div>
+      <div>
         psLink : {pslink}
       </div>
     </>
