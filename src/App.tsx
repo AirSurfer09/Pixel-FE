@@ -49,19 +49,19 @@ function App() {
           width: '100%'
         }}
       >
-        {
-          pslink &&
-          <PixelStreamingWrapper
-            initialSettings={{
-              AutoPlayVideo: true,
-              AutoConnect: true,
-              ss: pslink,
-              StartVideoMuted: true,
-              HoveringMouse: true,
-              WaitForStreamer: true
-            }}
-          />
-        }
+        {/* { */}
+        {/*   pslink && */}
+        {/*   <PixelStreamingWrapper */}
+        {/*     initialSettings={{ */}
+        {/*       AutoPlayVideo: true, */}
+        {/*       AutoConnect: true, */}
+        {/*       ss: pslink, */}
+        {/*       StartVideoMuted: true, */}
+        {/*       HoveringMouse: true, */}
+        {/*       WaitForStreamer: true */}
+        {/*     }} */}
+        {/*   /> */}
+        {/* } */}
         {
           psLinkPort &&
           <PixelStreamingWrapper
@@ -75,32 +75,32 @@ function App() {
             }}
           />
         }
-        {
-          ip80 &&
-          <PixelStreamingWrapper
-            initialSettings={{
-              AutoPlayVideo: true,
-              AutoConnect: true,
-              ss: ip80,
-              StartVideoMuted: true,
-              HoveringMouse: true,
-              WaitForStreamer: true
-            }}
-          />
-        }
-        {
-          ipPort &&
-          <PixelStreamingWrapper
-            initialSettings={{
-              AutoPlayVideo: true,
-              AutoConnect: true,
-              ss: ipPort,
-              StartVideoMuted: true,
-              HoveringMouse: true,
-              WaitForStreamer: true
-            }}
-          />
-        }
+        {/* { */}
+        {/*   ip80 && */}
+        {/*   <PixelStreamingWrapper */}
+        {/*     initialSettings={{ */}
+        {/*       AutoPlayVideo: true, */}
+        {/*       AutoConnect: true, */}
+        {/*       ss: ip80, */}
+        {/*       StartVideoMuted: true, */}
+        {/*       HoveringMouse: true, */}
+        {/*       WaitForStreamer: true */}
+        {/*     }} */}
+        {/*   /> */}
+        {/* } */}
+        {/* { */}
+        {/*   ipPort && */}
+        {/*   <PixelStreamingWrapper */}
+        {/*     initialSettings={{ */}
+        {/*       AutoPlayVideo: true, */}
+        {/*       AutoConnect: true, */}
+        {/*       ss: ipPort, */}
+        {/*       StartVideoMuted: true, */}
+        {/*       HoveringMouse: true, */}
+        {/*       WaitForStreamer: true */}
+        {/*     }} */}
+        {/*   /> */}
+        {/* } */}
         {pslink}
       </div>
     </>
