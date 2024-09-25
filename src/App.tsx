@@ -49,32 +49,32 @@ function App() {
           width: '100%'
         }}
       >
-        {
-          pslink &&
-          <PixelStreamingWrapper
-            initialSettings={{
-              AutoPlayVideo: true,
-              AutoConnect: true,
-              ss: pslink,
-              StartVideoMuted: true,
-              HoveringMouse: true,
-              WaitForStreamer: true
-            }}
-          />
-        }
         {/* { */}
-        {/*   psLinkPort && */}
+        {/*   pslink && */}
         {/*   <PixelStreamingWrapper */}
         {/*     initialSettings={{ */}
         {/*       AutoPlayVideo: true, */}
         {/*       AutoConnect: true, */}
-        {/*       ss: psLinkPort, */}
+        {/*       ss: pslink, */}
         {/*       StartVideoMuted: true, */}
         {/*       HoveringMouse: true, */}
         {/*       WaitForStreamer: true */}
         {/*     }} */}
         {/*   /> */}
         {/* } */}
+        {
+          psLinkPort &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: psLinkPort,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
         {/* { */}
         {/*   ip80 && */}
         {/*   <PixelStreamingWrapper */}
