@@ -7,7 +7,7 @@ function App() {
   const [ip80, setIp80] = useState<string | null>(null)
   const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
   const [finalRedirect, setFinalRedirect] = useState<string | null>(null)
-  const staticIp = "wss://ps-convai-ps-ugc-deployment-vm-instance-1727187589838-1.convai.com:443/?sessionid=feed8ff0-7b26-11ef-93c0-42010a7be011";
+  // const staticIp = "wss://ps-convai-ps-ugc-deployment-vm-instance-1727187589838-1.convai.com:443/?sessionid=feed8ff0-7b26-11ef-93c0-42010a7be011";
 
   useEffect(() => {
     fetch('https://api.convai.com/xp/streams/createWithScene', {
