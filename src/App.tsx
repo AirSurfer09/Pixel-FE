@@ -6,10 +6,7 @@ function App() {
   const [ipPort, setIpPort] = useState<string | null>(null)
   const [ip80, setIp80] = useState<string | null>(null)
   const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
-  // const staticPort = "https://pixel-stream.convai.com:444/";
-  // const staticIp = "ws://35.188.50.223:80/"
-  // const staticIp = "wss://pixel-stream.convai.com:443";
-  const staticIp = "wss://ps-convai-ps-ugc-deployment-vm-instance-1727187589838-1.convai.com:443/"
+  const staticIp = "https://ps-convai-ps-ugc-deployment-vm-instance-1727187589838-1.convai.com:444/?sessionid=feed8ff0-7b26-11ef-93c0-42010a7be011";
 
   useEffect(() => {
     fetch('https://api.convai.com/xp/streams/createWithScene', {
