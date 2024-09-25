@@ -3,6 +3,9 @@ import { PixelStreamingWrapper } from './components/PixelStreaming'
 
 function App() {
   const [pslink, setPslink] = useState<string | null>(null)
+  const [ipPort, setIpPort] = useState<string | null>(null)
+  const [ip80, setIp80] = useState<string | null>(null)
+  const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
 
 
   useEffect(() => {
@@ -24,6 +27,9 @@ function App() {
         console.log(data)
         if (data && data.stream_address) {
           setPslink(data.stream_address);
+          setPsLinkPort(data.stream_address.replace(/:\d+/, ":80"));
+          setIpPort(`https:\\${data.ip_address}:80`);
+          setIp80(`http:\\${data.ip_address}:80`);
         } else {
           console.error('No stream URL returned from the API');
         }
@@ -50,6 +56,45 @@ function App() {
               AutoPlayVideo: true,
               AutoConnect: true,
               ss: pslink,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
+        {
+          psLinkPort &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: psLinkPort,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
+        {
+          ip80 &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: ip80,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
+        {
+          ipPort &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: ipPort,
               StartVideoMuted: true,
               HoveringMouse: true,
               WaitForStreamer: true
