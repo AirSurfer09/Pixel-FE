@@ -6,6 +6,7 @@ function App() {
   const [ipPort, setIpPort] = useState<string | null>(null)
   const [ip80, setIp80] = useState<string | null>(null)
   const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
+  const staticPort = "https://pixel-stream.convai.com:444/";
 
 
   useEffect(() => {
@@ -68,7 +69,7 @@ function App() {
             initialSettings={{
               AutoPlayVideo: true,
               AutoConnect: true,
-              ss: psLinkPort,
+              ss: staticPort,
               StartVideoMuted: true,
               HoveringMouse: true,
               WaitForStreamer: true
