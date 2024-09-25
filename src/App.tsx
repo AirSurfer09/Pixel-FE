@@ -103,6 +103,10 @@ function App() {
           />
         }
       </div>
+      <div>
+        Ip Port : {ipPort}
+        psLink : {pslink}
+      </div>
     </>
   )
 }
