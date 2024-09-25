@@ -7,7 +7,7 @@ function App() {
   const [ip80, setIp80] = useState<string | null>(null)
   const [psLinkPort, setPsLinkPort] = useState<string | null>(null)
   // const staticPort = "https://pixel-stream.convai.com:444/";
-  const staticIp = "https://35.188.50.223:80/"
+  const staticIp = "http://35.188.50.223:80/"
 
   useEffect(() => {
     fetch('https://api.convai.com/xp/streams/createWithScene', {
