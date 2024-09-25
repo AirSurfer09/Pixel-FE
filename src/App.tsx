@@ -31,7 +31,7 @@ function App() {
       .catch(error => {
         console.error('Error fetching the stream:', error);
       });
-  }, [pslink]);
+  }, []);
 
 
 
