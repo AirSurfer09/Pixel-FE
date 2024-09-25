@@ -27,7 +27,7 @@ function App() {
         console.log(data)
         if (data && data.stream_address) {
           setPslink(data.stream_address);
-          setPsLinkPort(data.stream_address.replace(/:\d+/, ":80"));
+          setPsLinkPort(data.stream_address.replace(/:\d+/, ":8888"));
           setIpPort(`https://${data.ip_address}:80`);
           setIp80(`http://${data.ip_address}:80`);
         } else {
