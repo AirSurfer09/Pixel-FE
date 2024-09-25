@@ -76,19 +76,19 @@ function App() {
         {/*     }} */}
         {/*   /> */}
         {/* } */}
-        {/* { */}
-        {/*   ip80 && */}
-        {/*   <PixelStreamingWrapper */}
-        {/*     initialSettings={{ */}
-        {/*       AutoPlayVideo: true, */}
-        {/*       AutoConnect: true, */}
-        {/*       ss: ip80, */}
-        {/*       StartVideoMuted: true, */}
-        {/*       HoveringMouse: true, */}
-        {/*       WaitForStreamer: true */}
-        {/*     }} */}
-        {/*   /> */}
-        {/* } */}
+        {
+          ip80 &&
+          <PixelStreamingWrapper
+            initialSettings={{
+              AutoPlayVideo: true,
+              AutoConnect: true,
+              ss: ip80,
+              StartVideoMuted: true,
+              HoveringMouse: true,
+              WaitForStreamer: true
+            }}
+          />
+        }
         {/* { */}
         {/*   ipPort && */}
         {/*   <PixelStreamingWrapper */}
